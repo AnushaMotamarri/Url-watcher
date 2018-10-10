@@ -37,9 +37,9 @@ while(1):
             subprocess.Popen(['notify-send',"UPDATE",pres])
             server=smtplib.SMTP('smtp.gmail.com',587)
             server.starttls()
-            server.login("motamarrianusha01@gmail.com","28101311")
+            server.login("your_mailid","your_password")
             msg="\n**UPDATE**"+"\n "+pres
-            server.sendmail("motamarrianusha01@gmail.com","motamarrianusha01@gmail.com",msg)
+            server.sendmail("sender_mailid","receiver_mailid",msg)
             server.quit()
 
 
