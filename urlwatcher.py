@@ -10,17 +10,15 @@ from selenium.webdriver.common.keys import Keys
 import time
 options = Options()
 options.binary_location = "/usr/bin/chromedriver"
-#display = Display(visible=0, size=(800, 800))
-#display.start()
-driver=webdriver.Chrome()#options=options)
+driver=webdriver.Chrome()
 driver.get("http://placement.iitk.ac.in")
 
 username = driver.find_element_by_id("id_username")
 password = driver.find_element_by_id("id_password")
-username.send_keys("anusha")
-password.send_keys("anusha34")
-login_attempt = driver.find_element_by_xpath("//*[@type='Submit']")
-login_attempt.submit()
+username.send_keys("username")
+password.send_keys("password")
+login = driver.find_element_by_xpath("//*[@type='Submit']")
+login.submit()
 url="http://placement.iitk.ac.in/dashboard/"
 
 prev="randomstring"
